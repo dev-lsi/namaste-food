@@ -1,0 +1,100 @@
+html,body,ul,li,a,div,p,*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hardcode{
+    font-size: 1em;
+    background-color: antiquewhite;
+    color: blue;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 3em;
+    padding-block: 1em;
+    background-color: lightgrey;
+    border-bottom: 1px solid darkcyan;
+}
+
+.nav-ul{
+    font-size: 1.4em;
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+    gap:3em;
+}
+
+.logo{
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+}
+
+.cart{
+    color:red;
+    font-size: 1.6em;
+    line-height: 2em;
+    border: 1px solid red;
+    border-radius:0.1em;
+    padding-inline: 0.4em;
+}
+
+.search-form{
+    padding-inline: 2em;
+    padding-block: 1em;
+    border-bottom: 1px solid darkcyan;
+}
+
+.list-container{
+    background-color: rgb(240, 238, 230);
+    min-height: 80vh;
+    text-align: center;
+}
+
+.body{
+    display:flex;
+    flex-direction: column;
+}
+
+.list-container{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    column-gap: 2em;
+    row-gap: 4em;
+    padding-inline:2em;
+    padding-block: 4em;
+}
+
+.restaurant-card{
+    height:300px;
+    width: 220px;
+    border:1px solid gray;
+}
+.restaurant-image-container{
+    height:200px;
+    width: 220px;
+    background-color: cornflowerblue;
+}
+.restaurant-image{
+    height:200px;
+    width: 220px;
+}
+
+.footer{
+    border-top: 1px solid darkcyan;
+    background-color: lightgrey;
+    height: 6em;
+    padding: 3em;
+}
