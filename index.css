@@ -67,6 +67,30 @@ html,body,ul,li,a,div,p,*{
     flex-direction: column;
 }
 
+.search-form{
+    display: flex;
+    column-gap: 0.4em;
+}
+
+.search-field{
+    font-size: large;
+    width:300px;
+}
+
+.search-button{
+    background-color: darkolivegreen;
+    color:antiquewhite;
+    font-size: larger;
+}
+.filter-button{
+    margin-left: 2em;
+    width:200px;
+    background-color: darkolivegreen;
+    color:antiquewhite;
+    font-size: larger;
+    cursor:pointer;
+}
+
 .list-container{
     display:flex;
     justify-content:space-around;
