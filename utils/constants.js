@@ -3,6 +3,8 @@ export const restaurantsURL2="https://www.swiggy.com/dapi/restaurants/list/v5?la
 
 export const restaurantsURL="https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING";
 
+export const restaurantsURLoffset="https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING&offset=3";
+
 export const imageURL="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
 export const restaurantsData = "data.cards[4].card.gridElements.infoWithStyle.restaurants";
