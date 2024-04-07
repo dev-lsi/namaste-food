@@ -1,32 +1,24 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { restaurantsURL } from "../../utils/constants";
+import Shirm from "./Shirm";
+import useResMenu from "../../utils/useResMenu";
 //const restaurantsArr =
 //fetchedData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants;
 
-const RestaurantMenu=()=>{
-
-    const [menuItems,SetMenuItems]=useState("");
-    const params = useParams();
-
+const RestaurantMenu = () => {
     
+    const {resId} = useParams();
     
-    
-    useEffect(()=>{fetchMenu()},[]);
-
-    async function fetchMenu(url){
-    
-        const response = await fetch(url);
-        const data = await response.json();
-        SetMenuItems(data.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
-        console.log(menuItems);
-    }
+    const resMenu = useResMenu(resId);
 
     return (
         <div className="restaurant-menu">
-          {/* {menuItems.map(i=>i.cta.link)} */}
+            <h1>Menu</h1>
+            <h2>{resId}</h2>
+            <h2>{resMenu}</h2>
         </div>
-    )
-}
+    );
+};
 
 export default RestaurantMenu;
-

@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { logoURL } from "../../utils/constants";
 import { Link } from 'react-router-dom';
+import ConnectionLamp from './ConnectionLamp';
 
 const Header=()=>{
-const loginButtonName="Login";
 
-function changeName(){
+const [loginButtonText,setLoginButtonText]=useState("Login");
 
-    console.log("changeName called!");
-    const btn=document.querySelector('.login-button');
-    btn.innerHTML="Logout";
-    
+function changeLoginButtonText(){
+    loginButtonText ==="Login" 
+        ? setLoginButtonText("Logout")
+        :setLoginButtonText("Login")
 }
 
     return (
@@ -18,15 +18,16 @@ function changeName(){
             <div className='logo-container'>
                 <img className='logo' src={logoURL} alt='logo'/>
             </div>
+            <ConnectionLamp/>
             <ul className='nav-ul'>
-                <li><Link link to={'/'}>Home</Link></li>
-                <li><Link link to={'/about'}>About</Link></li>
-                <li><Link link to={'/contacts'}>Contacts</Link></li>
+                <li><Link to={'/'}>Home</Link></li>
+                <li><Link to={'/about'}>About</Link></li>
+                <li><Link to={'/contacts'}>Contacts</Link></li>
             </ul>
             <div className='cart'>
                 Cart
             </div>
-            <button onClick={changeName} className="login-button" >{loginButtonName}</button>
+            <button onClick={changeLoginButtonText} className="login-button" >{loginButtonText}</button>
         </div>
     )
 }

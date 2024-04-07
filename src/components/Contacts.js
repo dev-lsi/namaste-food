@@ -1,9 +1,13 @@
+import UserCardClass from "./UserCardClass";
+import UserFunctionalComponent from "./UserFunctionalComponent";
+
 const Contacts=()=>{
     return (
         <div>
-            <h1>Contacts</h1>
-            <h2>Phone:vb45df21</h2>
-            <h2>Social:dfg, sdr, fgh</h2>
+            <h1>Contact Page</h1>
+            <UserCardClass 
+                gitURL={"https://api.github.com/users/dev-lsi"}
+            />
         </div>
     )
 }

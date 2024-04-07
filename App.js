@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import Header from './components/Header';
-import Body from './components/Body';
-import Footer from './components/Footer';
-import About from './components/About';
-import Contacts from './components/Contacts';
-import RestaurantMenu from './components/RestaurantMenu';
-import Error from './components/Error';
+import Header from './src/components/Header';
+import Body from './src/components/Body';
+import Footer from './src/components/Footer';
+import About from './src/components/About';
+import Contacts from './src/components/Contacts';
+import RestaurantMenu from './src/components/RestaurantMenu';
+import Error from './src/components/Error';
 
 import {createBrowserRouter, Outlet, RouterProvider} from 'react-router-dom';
-import RestaurantMenu from './components/RestaurantMenu';
+
 
 const App=()=>{
     return (
@@ -26,25 +26,32 @@ const appRouter = createBrowserRouter([
     {
         path:'/',
         element:<App/>,
+        errorElement:<Error/>,
         children:[
             {
                 path:'/',
-                element:<Body/>
+                element:<Body/>,
+                
             },
             {
                 path:'/about',
-                element:<About/>
+                element:<About/>,
+              
+
             },
             {
                 path:'/contacts',
-                element:<Contacts/>
+                element:<Contacts/>,
+               
+
             },
             {
                 path:'/restaurants/:resId',
-                element:<RestaurantMenu/>
+                element:<RestaurantMenu/>,
+                
             }
         ],
-        errorElement:<Error/>,
+        
     }]);
 
 
