@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { logoURL } from "../../utils/constants";
 import { Link } from 'react-router-dom';
 import ConnectionLamp from './ConnectionLamp';
+import UserContext from '../../utils/UserContext';
 
 const Header=()=>{
 
 const [loginButtonText,setLoginButtonText]=useState("Login");
+const {loggedInUser}=useContext(UserContext);
 
 function changeLoginButtonText(){
     loginButtonText ==="Login" 
@@ -28,6 +30,7 @@ function changeLoginButtonText(){
                 Cart
             </div>
             <button onClick={changeLoginButtonText} className="login-button" >{loginButtonText}</button>
+            <h2>:{loggedInUser}</h2>
         </div>
     )
 }

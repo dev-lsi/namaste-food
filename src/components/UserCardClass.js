@@ -1,4 +1,5 @@
 import React from "react";
+import UserContext from "../../utils/UserContext";
 
 class UserCardClass extends React.Component{
     constructor(props){
@@ -38,7 +39,8 @@ class UserCardClass extends React.Component{
     
 
     render(){
-const {name,avatar_url,location} = this.state
+
+        const {name,avatar_url,location} = this.state
 
         return (
         <div className="user-card">
@@ -49,6 +51,9 @@ const {name,avatar_url,location} = this.state
                 </div>
             <h2>Name: {name}</h2>
             <h2>Location: {location}</h2>
+            <UserContext.Consumer>
+                {({loggedInUser})=><h4>{loggedInUser}</h4>}
+            </UserContext.Consumer>
         </div>
         )
     }

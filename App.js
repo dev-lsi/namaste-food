@@ -9,16 +9,22 @@ import Contacts from './src/components/Contacts';
 import RestaurantMenu from './src/components/RestaurantMenu';
 import Error from './src/components/Error';
 
+
 import {createBrowserRouter, Outlet, RouterProvider} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import appStore from './utils/appStore';
 
 
 const App=()=>{
     return (
-        <div className='app'>
+        <Provider store={appStore}>
+            <div className='app'>
             <Header/>
             <Outlet/>
             <Footer/>
         </div>
+        </Provider>
+        
     )
 }
 
